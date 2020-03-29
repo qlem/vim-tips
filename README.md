@@ -1,24 +1,24 @@
 # vim tips
 
 ## editing file, writing changes, quit
-`:w`            write changes
-`:q!`           quit without write changes
-`:wq`           write changes and quit
-`:w file`       write changes in a new file
-`:edit file`    edit file 
-`:!cmd`         exec a shell command
+`:w`            write changes  
+`:q!`           quit without write changes  
+`:wq`           write changes and quit  
+`:w file`       write changes in a new file  
+`:edit file`    edit file  
+`:!cmd`         exec a shell command  
 
 ## command auto-completion
-`ctrl-D`    list of available cmds according to the beginning of a cmd
-`<tab>`     completion
+`ctrl-D`    list of available cmds according to the beginning of a cmd  
+`<tab>`     completion  
 
 ## modes
-`i`         insert mode
-`v`         visual mode
-`gh`        select mode
-`R`         replace mode
-`gR`        virtual replace mode
-`<esc>`     normale mode
+`i`         insert mode  
+`v`         visual mode  
+`gh`        select mode  
+`R`         replace mode  
+`gR`        virtual replace mode  
+`<esc>`     normale mode  
 
 ## navigation
 `j`     down
@@ -117,7 +117,7 @@
 `:?pattern`     search backward
 `?<CR>`         search backward - use the latest used pattern
 `n`             next match
-`N`             prev match 
+`N`             prev match
 `*`             search occurrence forward for the word nearest to the cursor
 `#`             search occurrence backward for the word nearest to the cursor
 `g*`            like `*` - also search for non world
@@ -212,12 +212,12 @@
 ### word motions
 `w`     words forward
 `W`     WORDS forward
-`e`     forward to the end of word        
-`E`     forward to the end of WORD 
+`e`     forward to the end of word
+`E`     forward to the end of WORD
 `b`     words backward
 `B`     WORDS backward
-`ge`    backward to the end of word 
-`gE`    backward to the end of WORD 
+`ge`    backward to the end of word
+`gE`    backward to the end of WORD
 
 ## text object motions
 `(`     sentences backward
@@ -249,14 +249,14 @@
 `]*` `]/`   next end of a C comment `*/`
 
 ### text object selections
-`aw`            a word 
-`iw`            inner word 
-`aW`            a WORD 
-`iW`            inner WORD 
-`as`            a sentence 
-`is`            inner sentence 
-`ap`            a paragraph 
-`ip`            inner paragraph 
+`aw`            a word
+`iw`            inner word
+`aW`            a WORD
+`iW`            inner WORD
+`as`            a sentence
+`is`            inner sentence
+`ap`            a paragraph
+`ip`            inner paragraph
 `a]` `a[`       a `[]` block
 `i]` `i[`       inner `[]` block
 `a)` `a(` `ab`  a `()` block - including `(` and `)`
@@ -287,7 +287,7 @@
 `ctrl-W s`      split current win in two horizontaly
 `ctrl-W v`      split current win in two verticaly
 `ctrl-W n`      create a new empty win horizontaly
-`:vnew`         create a new empty win verticaly  
+`:vnew`         create a new empty win verticaly
 `ctrl-W q`      quit the current win
 `ctrl-W c`      close the current win
 
@@ -309,7 +309,7 @@
 `ctrl-W K`      move the current win to the very top - change the window layout
 `ctrl-W J`      move the current win to the very bottom - change the window layout
 `ctrl-W H`      move the current win to the far left - change the window layout
-`ctrl-W L`      move the current win to the far right - change the window layout 
+`ctrl-W L`      move the current win to the far right - change the window layout
 `ctrl-W T`      move the current win to a new tab
 
 ### resizing windows
