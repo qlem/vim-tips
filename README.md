@@ -219,7 +219,7 @@
 `ge`    backward to the end of word  
 `gE`    backward to the end of WORD  
 
-## text object motions
+### text object motions
 `(`     sentences backward  
 `)`     sentences forward  
 `{`     paragraphs backward  
