@@ -1,6 +1,6 @@
-# vim tips
+# -- vim tips --
 
-## editing file, writing changes, quit
+## editing file / writing changes / quit
 `:w`            write changes  
 `:q!`           quit without write changes  
 `:wq`           write changes and quit  
@@ -31,11 +31,11 @@
 `ctrl-U`        scroll upward - half of screen  
 `ctrl-E`        scroll downward  
 `ctrl-Y`        scroll upward  
-`zt` `z<CR>`    redraw with the line at top of win  
-`zz` `z.`       redraw with the line at center of win  
-`zb` `z-`       redraw with the line at bottom of win  
-`z+`            redraw with the line just below the win at the top of win  
-`z^`            redraw with the line just above the win at the bottom of win  
+`zt` `z<CR>`    redraw view - current line at the top of the win  
+`zz` `z.`       redraw view - current line at the center of the win  
+`zb` `z-`       redraw view - current line at the bottom of the win  
+`z+`            redraw view - 1st line below the win to the top of the win  
+`z^`            redraw with - 1st line above the win to the bottom of the win  
 `zl` `z<right>`     move the view on the text to the right  
 `zh` `z<left>`      move the view on the text to the left  
 `zL`            move the view on the text half a screenwidth to the right  
@@ -71,7 +71,7 @@
 `s`         delete char  
 `S`         like `cc`  
 
-## delete or change text
+## delete / change text
 `x` `<del>`     delete char under the cursor  
 `X`             delete char before the cursor  
 `dd`            delete line  
@@ -87,7 +87,7 @@
 `<<` `:[range]< {count}`    shift line leftward  
 `>>` `:[range]> {count}`    shift line rightward  
 
-## copying - moving text
+## copying / moving text
 `"{a-zA-Z0-9.%#:-"}`    select register  
 `:reg`                  list content of all numbered and named registers  
 `:reg {arg}`            list content of specified register(s)  
@@ -102,19 +102,16 @@
 `]p`                    like `p` - adjust the indent to the current line  
 `[P` `]P` `[p`          like `P` - adjust the indent to the current line  
 
-## undo and redo
+## undo / redo / repeat changes
 `u`         undo change  
 `U`         undo all latest changes on the last modified line  
 `ctrl-R`    redo change which was undone  
-
-## repeat change
 `.`         repeat last change  
-*-- see repeat.txt --*
 
 ## search
-`:/pattern`     search forward  
+`/pattern`      search forward  
 `/<CR>`         search forward - use the latest used pattern  
-`:?pattern`     search backward  
+`?pattern`      search backward  
 `?<CR>`         search backward - use the latest used pattern  
 `n`             next match  
 `N`             prev match  
@@ -124,14 +121,14 @@
 `g#`            like `#` - also search for non world  
 `gd`            go to local declaration  
 `gD`            go to global declaration  
-`1gd`           like `gd` - ignore matches inside `{}` block above the cursor  
-`1gD`           like `gD` - ignore matches inside `{}` block above the cursor  
+`1gd`           like `gd` - ignore matches inside `{}` block that ends before the cursor  
+`1gD`           like `gD` - ignore matches inside `{}` block that ends before the cursor  
 `ctrl-C`        interrupt current search  
 
 ## search and replace
 `:s/pattern/string/g`       replace all occurrences in the current line  
 `:s/pattern/string/gc`      idem - confirm each subs  
-`:%s/pattern/string/gc`     idem - search in entire file  
+`:%s/pattern/string/gc`     idem - search in the whole file  
 `&` `:s` `:&`               repeat last substitute - flags are not remembered  
 `:&&`                       repeat last substitute - keep the flags  
 `g&`                        repeat last substitute with the same flags with the last search pattern  
@@ -141,22 +138,22 @@
 `V`         start visual mode linewise  
 `ctrl-V`    start visual mode blockwise  
 `<esc>`     stop visual mode  
+`ctrl-G`    switch to select mode  
 `gv`        start visual mode with same prev area  
 `gn`        search forward last used search pattern (like `n`) and select the match  
 `gN`        search backward last used search pattern (like `N`) and select the match  
 `o`         move the cursor to the other end of area  
 `O`         like `o` - in block mode moves the cursor to the start / end of the current line  
-`~`         switch case of the highlighted text  
-`U`         make highlighted text uppercase  
-`u`         make highlighted text lowercase  
-`<`         shift left  
-`>`         shift right  
+
+## visual operators
+- operators: `~` `d` `c` `y` `>` `<`  
+- commands: `r` `s` `C` `S` `R` `x` `D` `X` `Y` `p` `J` `U` `u` `I` `A`  
+- objects: *-- see text object selection below --*  
 
 ## select mode
 `gh`            start select mode characterwise  
 `gH`            start select mode linewise  
 `g ctrl-H`      start select mode blockwise  
-`ctrl-G`        start select mode from visual mode  
 `<esc>`         stop select mode  
 `<NL>` `<CR>`   delete selection then enter in insert mode  
 `ctrl-O`        switch to visual mode for the duration of one command  
@@ -182,9 +179,9 @@
 `$`         last char of the line  
 `^`         1st non-blank char of the line  
 `g_`        last non-blank char of the line  
-`g0`        1st char of the screen line - on wrap line  
-`g^`        1st non-blank char of the screen line - on wrap line  
-`g$`        last char of the screen line - on wrap line  
+`g0`        1st char of the screen line  
+`g^`        1st non-blank char of the screen line  
+`g$`        last char of the screen line  
 `gm`        half of the screen width to the right - much as possible  
 `gM`        half of the text of the line  
 `|`         to screen column in current line - default col 0  
@@ -203,7 +200,7 @@
 `-`         up - 1st non-blank char  
 `+`         down - 1st non-blank char  
 `G`         go to line - default last line  
-`gg`        go to line - default first line  
+`gg`        go to line - default 1st line  
 `H`         go to line from top of window - default 1st line of window  
 `M`         go to middle line of window  
 `L`         go to line from bottom of window - default last line of window  
@@ -248,7 +245,7 @@
 `[*` `[/`   previous start of a C comment `/*`  
 `]*` `]/`   next end of a C comment `*/`  
 
-### text object selections
+### text object selection
 `aw`            a word  
 `iw`            inner word  
 `aW`            a WORD  
@@ -269,6 +266,11 @@
 `i"` `i'` ``i` ``  a quoted string - excluding quotes  
 `at`            a tag block - including `<tag>` and `</tag>`  
 `it`            inner tag block - excluding `<tag>` and `</tag>`  
+
+## indenting
+`=`     indent operator  
+`==`    indent the current line  
+`gg=G`  indent the whole file  
 
 ## formating text
 `:ce [w]`   center lines between specified width columns - default `textwidth` or 80  
