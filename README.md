@@ -145,7 +145,7 @@
 `o`         move the cursor to the other end of area  
 `O`         like `o` - in block mode moves the cursor to the start / end of the current line  
 
-## visual operators
+### operating on the visual area
 - operators: `~` `d` `c` `y` `>` `<`  
 - commands: `r` `s` `C` `S` `R` `x` `D` `X` `Y` `p` `J` `U` `u` `I` `A`  
 - objects: *-- see text object selection below --*  
