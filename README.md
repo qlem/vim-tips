@@ -262,8 +262,8 @@
 `i}` `i{` `iB`  inner `{}` block - excluding the `{` and `}`  
 `a>` `a<`       a `<>` block - including the `<` and `>`  
 `i>` `i<`       inner `<>` block - excluding the `<` and `>`  
-`a"` `a'` ``a` ``  a quoted string - including quotes  
-`i"` `i'` ``i` ``  a quoted string - excluding quotes  
+`a"` `a'` `` a` ``  a quoted string - including quotes  
+`i"` `i'` `` i` ``  a quoted string - excluding quotes  
 `at`            a tag block - including `<tag>` and `</tag>`  
 `it`            inner tag block - excluding `<tag>` and `</tag>`  
 
